@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/app.css">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Company Page</h1>
+    <form action="/companys/<%= company._id %>?_method=put" method="POST">
+      <label for="name">Company Name</label>
+      <input type="text" name="name" id="name" value="<%= company.name %>"/>
+      
+      <label for="logo">Company logo</label>
+      <input type="text" name="logo" id="logo" value="<%= company.logo %>"/>
+      
+      <label for="address">Company address</label>
+      <input type="text" name="address" id="address" value="<%= company.address %>"/>
+      
+      <label for="city">Company city</label>
+      <input type="text" name="city" id="city" value="<%= company.city %>"/>
+      
+      <label for="telephone">Company telephone</label>
+      <input type="text" name="telephone" id="telephone" value="<%= company.telephone %>"/>
+
+      <input type="submit" value="Edit company">
+    </form>
+  </body>
+</html>

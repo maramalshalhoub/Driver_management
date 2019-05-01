@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/app.css">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Car Page</h1>
+    <form action="/cars/<%= car._id %>?_method=put" method="POST">
+    <label for="carName">Car Name</label>
+    <input type="text" name="carName" id="carName" value="<%= car.carName %>"/>
+      
+      <label for="carModel">Car Model</label>
+      <input type="text" name="carModel" id="carModel" value="<%= car.carModel %>"/>
+      
+      <label for="carYear">Car Year</label>
+      <input type="text" name="carYear" id="carYear" value="<%= car.carYear %>"/>
+      
+      <label for="carImage">Car Image</label>
+      <input type="text" name="carImage" id="carImage" value="<%= car.carImage %>"/>
+      
+      <input type="submit" value="Edit Car">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<h1>Car Show Page</h1>
+<h6>Car Name: </h6>
+  <p>
+    <%= car.carName %> used for:  <%= car.companys.forEach(company =>{
+    <%= company.name %>
+    }) %>
+  </p>
+<h6>Car Model: </h6>
+<p>
+    <%= car.carModel %> used for:  <%= car.companys.forEach(company =>{
+    <%= company.name %>
+    }) %>
+  </p>
+<h6>Car Year: </h6>
+<p>
+    <%= car.carYear %> used for:  <%= car.companys.forEach(company =>{
+    <%= company.name %>
+    }) %>
+</p>
+<h6>Car Image: </h6>
+<p>
+    <%= car.carImage %> used for:  <%= car.companys.forEach(company =>{
+    <%= company.name %>
+    }) %>
+  </p>
+<form>
+  <a href ="/cars">Back</a>
+</form>

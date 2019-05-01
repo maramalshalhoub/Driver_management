@@ -1,0 +1,23 @@
+{
+  "name": "driver_management",
+  "version": "1.0.0",
+  "description": "driver_management for mongodb with mongoose",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "keywords": [
+    "driver_management",
+    "mongo",
+    "mongoose"
+  ],
+  "author": "Maram",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.5.4"
+  }
+}

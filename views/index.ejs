@@ -1,0 +1,21 @@
+<h1>All The Companys</h1>
+<nav>
+    <a href="/companys/new">Create a New Company</a>
+</nav>
+<ul>
+    <% for (i in companys) { %>
+        <li>
+            <%= companys[i].name %>, 
+            <%= companys[i].logo %>, 
+            <%= companys[i].address %>,
+            <%= companys[i].city %>, 
+            <%= companys[i].telephone %>
+           
+        </li>
+        <a href="/companys/<%= companys[i]._id %>">Show</a>
+        <a href="/companys/<%= companys[i]._id %>/edit">EDIT</a>
+        <form action="/companys/<%= companys[i]._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE"/>
+        </form>
+    <% } %>
+</ul>
