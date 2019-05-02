@@ -8,12 +8,17 @@ const Driver = require('./models/driver')
 const ejs= require('ejs');
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
-
+const companyRoutes = require('./routes/company')
+const driverRoutes = require('./routes/driver')
+const carRoutes = require('./routes/car')
 app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({extended:false}))
 app.use(express.static('public'));
 app.use(methodOverride('_method'))
+app.use('/companys', companyRoutes);
+app.use('/drivers', driverRoutes);
+app.use('/cars', carRoutes);
 
 mongoose.connect('mongodb://localhost:27017/companys', {useNewUrlParser: true}).then(() => {
     console.log('mongodb running');
