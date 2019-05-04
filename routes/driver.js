@@ -75,3 +75,63 @@ router.put('/driver/:id', (req, res) => {
   })
 
 module.exports = router;
+
+
+
+// //Driver
+// //Driver INDEX
+// app.get('/drivers', (req, res) => {
+//   Driver.find()
+//   .then((drivers)=>{
+//     res.render('index', { drivers })
+//   })
+//   .catch(err => console.log(err))
+// })
+
+// //Driver NEW
+// app.get('/drivers/new', (req, res) => {
+//   Driver.find()
+//     .then(drivers => {
+//       res.render('drivers/new', { drivers })
+//     })
+// })
+
+// //Driver SHOW
+// app.get('/drivers/:indexOfDriversArray', (req, res) => {
+//   Driver.findById(req.params.indexOfDriversArray)
+//   .then((driver)=>{
+//     res.render('show', {
+//       driver: driver
+//     })
+//   })
+// })
+
+// //Driver EDIT
+// app.get('/drivers/:id/edit', (req, res) => {
+//   let drivers= []
+//    Driver.find()
+//   .then(driver => {
+//     drivers= driver
+//   })
+//   driver.findById(req.params.id)
+//     .then(driver => {
+//       res.render('drivers/edit', { driver,drivers })
+//     })
+// })
+
+// //Driver DELETE
+// app.delete('/drivers/:id', (req, res) => {
+//   driver.findByIdAndDelete(req.params.id)
+//     .then(() => {
+//       res.redirect('/drivers');
+//     })
+// })
+
+// //Driver PUT
+// app.put('/drivers/:id', (req, res) => {
+//   let updated = req.body
+//   driver.findByIdAndUpdate(req.params.id, updated)
+//     .then(driver => {
+//       res.redirect(`/drivers/${driver._id}`);
+//     })
+// })

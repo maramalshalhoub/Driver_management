@@ -6,12 +6,7 @@ const driverSchema = new Schema({
         name: {type: String, required: true},
         age: {type: String},
         image: {type: String}}],
-    cars: [{
-            car:{ type: Schema.Types.ObjectId, ref: 'Car'},
-            fuel:{type: String, enum: ['empty','half', 'full']},
-            picked:{type: Date, default: Date.now },
-            dropped: {type: Date }
-        }],
+    cars:[{ type: Schema.Types.ObjectId, ref: 'Car'}],
     company: { type: Schema.Types.ObjectId, ref: 'Company'}
     },{timestamps: true,versionKey: false});
 

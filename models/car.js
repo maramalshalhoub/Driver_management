@@ -7,6 +7,7 @@ const carSchema = new Schema({
         model: {type: String, required: true},
         year: {type: String, required: true},
         image: {type: String} }],
+    drivers: [{ type: Schema.Types.ObjectId, ref: 'Driver'}],
     company: { type: Schema.Types.ObjectId, ref: 'Company'}
     }, {timestamps: true,_id : false, versionKey: false});
 

@@ -33,3 +33,62 @@ router.post('/new', (req, res) => {
     })
   })
 module.exports = router;
+
+
+
+// //Car INDEX
+// app.get('/cars', (req, res) => {
+//   Car.find()
+//   .then((cars)=>{
+//     res.render('index', { cars })
+//   })
+//   .catch(err => console.log(err))
+// })
+
+// //Car NEW
+// app.get('/cars/new', (req, res) => {
+//   Car.find()
+//     .then(cars => {
+//       res.render('cars/new', { cars })
+//     })
+// })
+
+// //Car SHOW
+// app.get('/cars/:indexOfCarsArray', (req, res) => {
+//   Car.findById(req.params.indexOfCarsArray)
+//   .then((car)=>{
+//     res.render('show', {
+//       car: car
+//     })
+//   })
+// })
+
+// // Car EDIT
+// app.get('/cars/:id/edit', (req, res) => {
+//   let cars= []
+//    Fruit.find()
+//   .then(car => {
+//     cars= car
+//   })
+//   car.findById(req.params.id)
+//     .then(car => {
+//       res.render('cars/edit', { car,cars }) //Fruit.find()
+//     })
+// })
+
+// // Car DELETE
+// app.delete('/cars/:id', (req, res) => {
+//   car.findByIdAndDelete(req.params.id)
+//     .then(() => {
+//       res.redirect('/cars');
+//     })
+// })
+
+// //Car PUT
+// app.put('/cars/:id', (req, res) => {
+//   let updated = req.body
+//   car.findByIdAndUpdate(req.params.id, updated)
+//     .then(car => {
+//       res.redirect(`/cars/${car._id}`);
+//     })
+// })
